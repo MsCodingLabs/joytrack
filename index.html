@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JoyTrack App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Zeigt das aktuelle Datum an -->
+      <p id="date">📅 Heute ist:</p>
+
+      <!-- Überschrift zur Stimmungsauswahl -->
+      <h2>Wie fühlst du dich?</h2>
+
+      <!-- Auswahlmöglichkeiten für die Stimmung -->
+      <div class="mood-container">
+        <!-- Jede Schaltfläche steht für eine Stimmung -->
+        <button class="mood-option" onclick="saveMood(this, '😖')">
+          <span class="mood-icon">😖</span>
+          <span class="mood-label">Gestresst</span>
+        </button>
+        <button class="mood-option" onclick="saveMood(this, '😌')">
+          <span class="mood-icon">😌</span>
+          <span class="mood-label">Ausgeglichen</span>
+        </button>
+        <button class="mood-option" onclick="saveMood(this, '😫')">
+          <span class="mood-icon">😫</span>
+          <span class="mood-label">Überfordert</span>
+        </button>
+        <button class="mood-option" onclick="saveMood(this, '😐')">
+          <span class="mood-icon">😐</span>
+          <span class="mood-label">Unterfordert</span>
+        </button>
+      </div>
+
+      <!-- Frage nach Unterstützungsbedarf -->
+      <h3>Brauchst du Unterstützung?</h3>
+
+      <!-- Auswahl Ja oder Nein -->
+      <div class="support-container">
+        <button class="support-option" onclick="toggleSupport(this, true)">
+          ✅ Ja
+        </button>
+        <button class="support-option" onclick="toggleSupport(this, false)">
+          ❌ Nein
+        </button>
+      </div>
+
+      <!-- Kommentarfeld erscheint nur bei "Ja" -->
+      <div id="support-comment" class="hidden">
+        <textarea
+          id="comment"
+          placeholder="Schreibe hier dein Anliegen..."
+        ></textarea>
+
+        <!-- Absenden-Button für den Kommentar -->
+        <button class="submit-btn" onclick="saveSupportComment()">
+          Absenden
+        </button>
+      </div>
+
+      <!-- Ausgabe von Bestätigungen oder Nachrichten -->
+      <h4 id="output"></h4>
+
+      <!-- Bereich für das Diagramm zur Stimmung -->
+      <h3>Ergebnisse</h3>
+      <div class="chart-container">
+        <canvas id="moodChart"></canvas>
+      </div>
+
+      <!-- Nochmals ein Ausgabebereich -->
+      <h4 id="output"></h4>
+
+      <!-- Dankeschön-Nachricht wird angezeigt, wenn alles abgeschlossen ist -->
+      <div id="thank-you-message" class="hidden">
+        <p>Danke! Einen schönen Tag noch!</p>
+      </div>
+
+      <!-- Erklärung zum Datenschutz -->
+      <div id="privacy-policy">
+        <h4>Datenschutz</h4>
+        <p>
+          Wir speichern keine persönlichen Daten, sondern lediglich
+          Informationen zu deiner Stimmung und möglichen Kommentaren, die du in
+          der App hinterlässt. Diese Daten werden nur in deinem Browser
+          gespeichert und sind nicht öffentlich zugänglich. Wenn du die App
+          verlässt oder den Browser schließt, bleiben die Daten auf deinem Gerät
+          gespeichert, bis du sie manuell löschst.
+        </p>
+      </div>
+
+      <!-- Button zum Löschen aller gespeicherten Daten -->
+      <button onclick="deleteStoredData()">Daten löschen</button>
+    </div>
+
+    <!-- Einbindung der JavaScript-Datei -->
+    <script src="script.js" defer></script>
+  </body>
+</html>

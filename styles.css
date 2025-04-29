@@ -1,0 +1,241 @@
+/* Farben und Design-Variablen für die ganze App */
+:root {
+  --primary-color: #4caf50;
+  --secondary-color: #f4f4f4;
+  --text-color: #333;
+  --highlight-color: #056bd8;
+  --background-color: #e9f5e9;
+}
+
+/* Grundstil für die Seite */
+body {
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Hauptcontainer in der Mitte der Seite */
+.container {
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+}
+
+/* Überschriften-Styling */
+h2,
+h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--highlight-color);
+  margin-bottom: 10px;
+}
+
+/* Layout für die Auswahlbereiche */
+.mood-container,
+.support-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+/* Styling für Buttons (Stimmung & Support) */
+.mood-option,
+.support-option {
+  background: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 8px;
+  color: var(--text-color);
+  transition: background-color 0.3s ease;
+  width: 40%; /* Standardbreite der Buttons */
+  margin: 5px;
+}
+
+/* Effekt beim Darüberfahren mit der Maus */
+.mood-option:hover,
+.support-option:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Aktiver Button-Stil */
+.mood-option.active,
+.support-option.active {
+  background-color: var(--highlight-color);
+  color: white;
+}
+
+/* Text im aktiven Button wird fett dargestellt */
+.mood-option.active .mood-label,
+.support-option.active {
+  font-weight: bold;
+}
+
+/* Größe des Emoji-Symbols */
+.mood-icon {
+  font-size: 40px;
+}
+
+/* Emoji wird beim Hover größer */
+.mood-option:hover .mood-icon {
+  transform: scale(1.2);
+}
+
+/* Bereich für den Support-Kommentar */
+#support-comment {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Eingabefeld für den Kommentar */
+textarea {
+  width: 80%;
+  height: 80px;
+  padding: 8px;
+}
+
+/* Button zum Absenden des Kommentars */
+.submit-btn {
+  margin-top: 10px;
+  background-color: var(--highlight-color);
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Bereich für das Diagramm */
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+/* Maximale Breite für das Diagramm */
+#moodChart {
+  max-width: 300px;
+}
+
+/* Versteckte Elemente */
+.hidden {
+  display: none;
+}
+
+#thank-you-message {
+  margin-top: 20px;
+  font-size: 16px;
+  color: white;
+  background-color: var(--highlight-color);
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Danke-Nachricht-Stil */
+#thank-you-message p {
+  font-size: 14px;
+  color: white;
+  margin: 0;
+}
+
+/* Textausgabe-Stil */
+#output {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+/* Allgemeine Button-Stile */
+button {
+  background-color: var(--highlight-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Hover-Effekt für alle Buttons */
+button:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+/* Datenschutz-Text */
+#privacy-policy {
+  font-size: 14px;
+  color: var(--text-color);
+  margin-top: 20px;
+  padding: 10px;
+}
+
+/* Anpassung für mittlere Bildschirme (z. B. Tablets) */
+@media (max-width: 768px) {
+  .container {
+    width: 90%; /* Container passt sich an kleinere Bildschirme an */
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  h2,
+  h3 {
+    font-size: 20px;
+  }
+
+  .mood-option,
+  .support-option {
+    width: 48%; /* Breite der Buttons wird auf 48% gesetzt für mobile Geräte */
+  }
+
+  .chart-container {
+    height: 150px;
+  }
+
+  #moodChart {
+    max-width: 250px;
+  }
+
+  textarea {
+    width: 90%; /* Textarea breiter auf mobilen Geräten */
+  }
+}
+
+/* Anpassung für sehr kleine Bildschirme (z. B. Smartphones) */
+@media (max-width: 480px) {
+  h2,
+  h3 {
+    font-size: 18px;
+  }
+
+  .mood-option,
+  .support-option {
+    width: 100%; /* Buttons nehmen 100% der Breite auf sehr kleinen Geräten */
+    margin-bottom: 10px;
+  }
+
+  #output {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    width: 80%; /* Schaltfläche wird breiter auf kleinen Bildschirmen */
+  }
+
+  #moodChart {
+    max-width: 200px; /* Diagramm wird auf kleineren Geräten kleiner */
+  }
+}
