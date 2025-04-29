@@ -1,21 +1,32 @@
 # joytrack
-<section class="about">
-  <h2>🟢 JoyTrack – Employee Mood Tracker</h2>
-  <p><strong>Description:</strong><br>
-    Since the 1950s, researchers have recognized the powerful link between mood and job performance. <strong>JoyTrack</strong> makes it easy to track your team's daily mood and visualize trends over time – simple, private, and effective.
-  </p>
-  <p><strong>Features:</strong></p>
-  <ul>
-    <li>Daily mood selection via emoji buttons</li>
-    <li>Real-time mood distribution shown in a chart</li>
-    <li>Optional support request with comment</li>
-    <li>Automatic daily reset</li>
-    <li>All data stored locally in the browser (privacy-friendly)</li>
-  </ul>
-  <p><strong>Goal:</strong><br>
-    Identify emotional patterns early and take targeted actions to boost team well-being and productivity.
-  </p>
-  <p><strong>Technologies:</strong><br>
-    HTML · CSS · JavaScript (with Chart.js and localStorage)
-  </p>
-</section>
+# 🟢 JoyTrack – Employee Mood Tracker
+
+**Track your team's mood and support needs – privately and visually.**
+
+Since the 1950s, researchers have understood how mood affects performance. JoyTrack lets you easily monitor your team's well-being on a daily basis and visualize mood trends in a simple chart.
+
+## ✨ Features
+
+- Daily mood tracking with emoji-based buttons
+- Mood summary chart using Chart.js
+- Optional support request with comment field
+- Daily reset of mood data
+- Local storage only (no server, no data collection)
+
+## 🎯 Purpose
+
+Identify emotional patterns and support needs early – improve productivity and team spirit.
+
+## 🛠️ Built With
+
+- HTML
+- CSS
+- JavaScript
+- Chart.js
+- localStorage API
+
+## 📁 Usage
+
+1. Clone or download the repo.
+2. Open `index.html` in your browser.
+3. That’s it – everything runs client-side.
