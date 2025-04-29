@@ -1,4 +1,3 @@
-# joytrack
 # 🟢 JoyTrack – Employee Mood Tracker
 
 **Track your team's mood and support needs – privately and visually.**
