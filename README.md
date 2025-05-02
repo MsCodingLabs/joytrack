@@ -5,7 +5,7 @@
 Since the 1950s, researchers have understood how mood affects performance. JoyTrack lets you easily monitor your team's well-being on a daily basis and visualize mood trends in a simple chart.
 
 ## Screenshot
-![joyTrack.png](https://github.com/MsCodingLabs/quizze/blob/main/quizze.png)
+![joyTrack.png](https://github.com/MsCodingLabs/joytrack/blob/main/joyTrack.png)
 
 ## ✨ Features
 
